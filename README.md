@@ -62,25 +62,59 @@ A decisao de ligar ou desligar a bomba segue esta logica:
 
 ### Imagem do circuito
 
-Galera temo q colocar aq blz?
+<p align="center">
+<img src="assets/circuito-wokwi.png" alt="Circuito no Wokwi" width=80%>
+</p>
+
+> Para gerar essa imagem, abra o projeto no Wokwi e tire um print do circuito montado.
 
 ## Estrutura de pastas
 
+Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
+
+- **.github**: Nesta pasta ficarão os arquivos de configuração específicos do GitHub que ajudam a gerenciar e automatizar processos no repositório.
+
+- **assets**: Aqui estão os arquivos relacionados a elementos não-estruturados deste repositório, como imagens.
+
+- **config**: Posicione aqui arquivos de configuração que são usados para definir parâmetros e ajustes do projeto.
+
+- **document**: Aqui estão todos os documentos do projeto que as atividades poderão pedir. Na subpasta "other", adicione documentos complementares e menos importantes.
+
+- **scripts**: Posicione aqui scripts auxiliares para tarefas específicas do seu projeto. Exemplo: deploy, migrações de banco de dados, backups.
+
+- **src**: Todo o código fonte criado para o desenvolvimento do projeto ao longo das 7 fases.
+
+- **README.md**: Arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
+
+```
+fase2_cap1/
+├── .github/               # Configurações específicas do GitHub
+├── assets/                # Imagens e arquivos não-estruturados (logo, circuito, etc.)
+├── config/                # Arquivos de configuração do projeto
+├── document/              # Documentos do projeto
+│   └── other/             # Documentos complementares
+├── scripts/               # Scripts auxiliares (deploy, backups, etc.)
+├── src/                   # Código fonte do projeto
+│   ├── sketch.ino         # Código principal do ESP32 (C/C++)
+│   ├── iralem.py          # Script Python - Integração com API meteorológica
+│   └── iralem.r           # Script R - Análise estatística
+├── instrucoes.md          # Enunciado do projeto
+└── README.md              # Este arquivo
+```
 
 ## Como executar
 
 ### 1. Simulacao no Wokwi (obrigatorio)
 
 1. Acesse [wokwi.com](https://wokwi.com) e crie um novo projeto **ESP32**
-2. Copie o conteudo de `esp32/sketch.ino` para o editor de codigo
-3. Copie o conteudo de `esp32/diagram.json` para o arquivo de diagrama
-4. Na aba **Libraries**, adicione a biblioteca `DHT sensor library`
-5. Clique em **Start Simulation**
-6. Interaja com os sensores:
+2. Copie o conteudo de `src/sketch.ino` para o editor de codigo
+3. Na aba **Libraries**, adicione a biblioteca `DHT sensor library`
+4. Clique em **Start Simulation**
+5. Interaja com os sensores:
    - Pressione os botoes **N**, **P**, **K** para simular presenca de nutrientes
    - Ajuste o **LDR** (clicando nele) para variar o pH simulado
    - Ajuste o **DHT22** (clicando nele) para variar a umidade
-7. Observe no **Monitor Serial** as leituras e a decisao de irrigacao
+6. Observe no **Monitor Serial** as leituras e a decisao de irrigacao
 
 ### 2. Script Python - API meteorologica (Ir Além)
 
@@ -89,13 +123,13 @@ Galera temo q colocar aq blz?
 pip install requests
 
 # Execute o script
-python python/clima.py
+python src/iralem.py
 ```
 
 ### 3. Analise em R (Ir Além)
 
 ```bash
-Rscript r/analise.R
+Rscript src/iralem.r
 ```
 
 ## Historico de lancamentos
