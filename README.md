@@ -62,11 +62,7 @@ A decisao de ligar ou desligar a bomba segue esta logica:
 
 ### Imagem do circuito
 
-<p align="center">
-<img src="assets/circuito-wokwi.png" alt="Circuito no Wokwi" width=80%>
-</p>
-
-> Para gerar essa imagem, abra o projeto no Wokwi e tire um print do circuito montado.
+temo q fzr isso ainda.
 
 ## Estrutura de pastas
 
@@ -83,24 +79,10 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 - **scripts**: Posicione aqui scripts auxiliares para tarefas específicas do seu projeto. Exemplo: deploy, migrações de banco de dados, backups.
 
 - **src**: Todo o código fonte criado para o desenvolvimento do projeto ao longo das 7 fases.
-
+  - `sketch.ino ` - Código principal do ESP32 (C/C++).
+  - `iralem.py `  - Script Python com integração com API meteorológica.
+  - `iralem.R` - Script R - Análise estatística
 - **README.md**: Arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
-
-```
-fase2_cap1/
-├── .github/               # Configurações específicas do GitHub
-├── assets/                # Imagens e arquivos não-estruturados (logo, circuito, etc.)
-├── config/                # Arquivos de configuração do projeto
-├── document/              # Documentos do projeto
-│   └── other/             # Documentos complementares
-├── scripts/               # Scripts auxiliares (deploy, backups, etc.)
-├── src/                   # Código fonte do projeto
-│   ├── sketch.ino         # Código principal do ESP32 (C/C++)
-│   ├── iralem.py          # Script Python - Integração com API meteorológica
-│   └── iralem.r           # Script R - Análise estatística
-├── instrucoes.md          # Enunciado do projeto
-└── README.md              # Este arquivo
-```
 
 ## Como executar
 
