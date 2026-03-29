@@ -116,6 +116,9 @@ Rscript src/iralem.r
 
 ## Historico de lancamentos
 
+* 0.1.1 - 29/03/2026
+    * Criação do repositório
+    
 * 0.1.0 - 26/03/2026
     * Implementacao do sistema de irrigacao inteligente no ESP32 (sketch.ino)
     * Diagrama do circuito para o Wokwi (diagram.json)
